@@ -45,8 +45,8 @@ install(DIRECTORY include/
 
 set(PKG_NAME ${PROJECT_NAME})
 set(PKG_LIBRARIES ${PROJECT_NAME})
-set(cmake_conf_file "${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}-config.cmake")
-configure_file("${cmake_conf_file}.in" "${CMAKE_BINARY_DIR}/${cmake_conf_file}" @ONLY)
+set(cmake_conf_file "${PROJECT_NAME}-config.cmake")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/${cmake_conf_file}.in" "${CMAKE_BINARY_DIR}/${cmake_conf_file}" @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/${cmake_conf_file}
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME}/cmake/ COMPONENT cmake)
 
